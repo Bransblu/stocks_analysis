@@ -19,9 +19,11 @@ Included are tables relative to year. Formatting was implemented to improve user
   - Cell color red if value is negative and green if positive
 
 
+![2017_table](Resources/VBA_Stock_Analysis_2017.png)
 
 ----
 
+![2018_table](Resources/VBA_Stock_Analysis_2018.png)
 
  
      '1a) Create a ticker Index
