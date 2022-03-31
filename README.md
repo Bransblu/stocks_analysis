@@ -9,11 +9,12 @@ Create an excel application for client to analyze stock data for 2017 and 2018. 
 ## Results
 
 
+
 ### Analysis
 
 
  
-     <code>'1a) Create a ticker Index
+     '1a) Create a ticker Index
     'tickerIndex is set equal to zero
     tickerIndex = 0
     
@@ -68,7 +69,7 @@ Create an excel application for client to analyze stock data for 2017 and 2018. 
         Cells(4 + i, 2).Value = tickerVolumes(i)
         Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
     
-        Next i</code>
+        Next i
 
 * Time taken 2017 original .4414 seconds
 * Time taken 2018 original .4453 seconds
