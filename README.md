@@ -12,6 +12,12 @@ Create an excel application for client to analyze stock data for 2017 and 2018. 
 
 ### Analysis
 
+Included are tables relative to year. Formatting was implemented to improve user experience. These improvements include:
+- Bold headers and bottom line
+- Column B (Total Daily Volume) formatted to include commas
+- Column C (Results) formatted to a tenth decimal
+  - Cell color red if value is negative and green if positive
+
 ![2017_table](Resources/VBA_Challenge_2017.png)
 
 ----
@@ -74,12 +80,17 @@ Create an excel application for client to analyze stock data for 2017 and 2018. 
         Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
     
         Next i
-
-* Time taken 2017 original .4414 seconds
-* Time taken 2018 original .4453 seconds
 ----
-* Time taken 2017 refactored .0625 seconds
-* Time taken 2018 refactored .0625 seconds
+
+The execution times from the original code to refactored code is roughly 7 times faster. The use of arrays
+##### Execution times Original
+* Time taken 2017 .4414 seconds
+* Time taken 2018 .4453 seconds
+##### Execution times Refactored
+* Time taken 2017 .0625 seconds
+* Time taken 2018 .0625 seconds
+
+
 ## Summary
 
 ### Advantages of Refactoring Code
