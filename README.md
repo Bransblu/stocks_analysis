@@ -18,11 +18,11 @@ Included are tables relative to year. Formatting was implemented to improve user
 - Column C (Results) formatted to a tenth decimal
   - Cell color red if value is negative and green if positive
 
-![2017_table](Resources/VBA_Challenge_2017.png)
+
 
 ----
 
-![2018_table](Resources/VBA_Challenge_2018.png)
+
  
      '1a) Create a ticker Index
     'tickerIndex is set equal to zero
@@ -89,6 +89,11 @@ The execution times from the original code to refactored code is roughly 7 times
 ##### Execution times Refactored
 * Time taken 2017 .0625 seconds
 * Time taken 2018 .0625 seconds
+
+![2017_table](Resources/VBA_Challenge_2017.png)
+
+![2018_table](Resources/VBA_Challenge_2018.png)
+
 
 
 ## Summary
