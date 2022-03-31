@@ -25,7 +25,8 @@ Included are tables relative to year. Formatting was implemented to improve user
 
 ![2018_table](Resources/VBA_Stock_Analysis_2018.png)
 
- 
+#### Code
+
 Created tickerIndex and set two zero. Created three output arrays. tickerVolume was set as a long variable due to the larger output.
      '1a) Create a ticker Index
     'tickerIndex is set equal to zero
