@@ -88,11 +88,11 @@ The execution times from the original code to refactored code is roughly 7 times
 * Time taken 2018 .4453 seconds
 ##### Execution times Refactored
 * Time taken 2017 .0625 seconds
-* Time taken 2018 .0625 seconds
+* Time taken 2018 .0781 seconds
 
-![2017_table](Resources/VBA_Challenge_2017.png)
+![2017_time](Resources/VBA_Challenge_2017.png)
 
-![2018_table](Resources/VBA_Challenge_2018.png)
+![2018_time](Resources/VBA_Challenge_2018.png)
 
 
 
