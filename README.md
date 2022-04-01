@@ -26,7 +26,7 @@ Created tickerIndex and set two zero. Created three output arrays. tickerVolume 
     'tickerIndex is set equal to zero
     tickerIndex = 0   
     
-    '1b) Create three output arrays
+    '1b) Create three output arrays. tickerVolumes is long due to a larger number
     Dim tickerVolumes(12) As Long
     Dim tickerStartingPrices(12) As Single
     Dim tickerEndingPrices(12) As Single
@@ -36,6 +36,7 @@ Set i from 0 to 11 to match with tickers. Loop was set to zero for initation of 
 
     '2a) Create a for loop to initialize the tickerVolumes to zero. 
     For i = 0 To 11
+        'arrays set to zero and will be adding next steps
         tickerVolumes(i) = 0
         tickerStartingPrices(i) = 0
         tickerEndingPrices(i) = 0
@@ -101,7 +102,17 @@ The execution times from the original code to refactored code is roughly 7 times
 
 ## Summary
 
-### Advantages of Refactoring Code
+### Advantages and Disadvantages of Refactoring Code
+
+##### Advantages
+Refactoring code fine tunes to improve organization and overall efficiency. By reducing the amount of steps required to run the code successfuly, the execution time was reduced significantly. There are also opportunities within refactoring code. For example, an opportunity to work with a specific project and/or code would be initiated by refactoring that code. In terms of organization, the ability to return to a code or avoid confusion if worked on by another analyst is a crucial benefit.
+##### Disadvantages
+The process of refactoring code is not quick and has the potential to create new issues. As stated by Martin Fowler, "You shouldn't refactor if a deadline is near. That time in project is better suited to flush out bugs instead of improving design(Refactoring). Do the refactoring omitted this time directly after deadline is over."[Pros and Cons of Code Refactoring](https://www.c-sharpcorner.com/article/pros-and-cons-of-code-refactoring/?msclkid=b5a3a4bdb1d811ecb8f3725572b7416d)(2017). While refactoring code does have a positive impact if organized correctly, it can also have a negative impact if poorly organized.
 
 ### Pros and Cons of Refactoring Original Script 
+
+##### Advantages
+
+##### Disadvantages
+
 
