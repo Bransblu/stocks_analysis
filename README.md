@@ -12,11 +12,7 @@ Create an excel application for client to analyze stock data for 2017 and 2018. 
 
 ### Analysis
 
-Included are tables relative to year. Formatting was implemented to improve user experience. These improvements include:
-- Bold headers and bottom line
-- Column B (Total Daily Volume) formatted to include commas
-- Column C (Results) formatted to a tenth decimal
-  - Cell color red if value is negative and green if positive
+
 
 
 ![2017_table](Resources/VBA_Stock_Analysis_2017.png)
