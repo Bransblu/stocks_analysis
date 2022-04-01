@@ -85,7 +85,7 @@ Again, for loop was set from 0 to 11 and closed immediately after to save on exe
         Next i
 ----
 
-The execution times from the original code to refactored code is roughly 7 times faster. The use of arrays to loop data together impacted the increase in speed.
+The execution times from the original code to refactored code is roughly 7 times faster. The use of arrays to loop data together impacted the increase in speed. **When running analysis on either year for the first time, the execution time is almost twice as slow. Once the macro has been run though, it execution time is faster and matches what's stated below.**
 ##### Execution times Original
 * Time taken 2017 .4414 seconds
 * Time taken 2018 .4453 seconds
