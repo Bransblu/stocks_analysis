@@ -3,16 +3,13 @@
 ## Project Overview
 
 
-Create an excel application for client to analyze stock data for 2017 and 2018. This application will have the ability to analyze thousands of stocks at reduced execution time. The requested output for the analysis includes stock tickers, total daily volume, and stock results. 
+Create an excel application for client to analyze stock data for 2017 and 2018. Compare the stock performance between years and deliver findings. This application will have the ability to analyze thousands of stocks at reduced execution time. The requested output for the analysis includes stock tickers, total daily volume, and stock results. 
 
 
 ## Results
 
-
-
-### Analysis
-
-
+#### Stock Performance
+The 12 stocks compared were more successful in 2017 than 2018. In 2017, 11 stocks were positive in sales with an average of 67% gain. In comparison, 2018 had 10 stocks were negative with an average of 8.5% loss. The top stock performance results were DQ @ 199.4% (2017) and RUN @ 84.0% (2018). The worst performerance results were TERP @ -7.2% (2017) and DQ @ -62.6% (2018). DQ was the most volatile stock compared.
 
 
 ![2017_table](Resources/VBA_Stock_Analysis_2017.png)
@@ -21,7 +18,8 @@ Create an excel application for client to analyze stock data for 2017 and 2018. 
 
 ![2018_table](Resources/VBA_Stock_Analysis_2018.png)
 
-#### Code
+### Code
+
 
 Created tickerIndex and set two zero. Created three output arrays. tickerVolume was set as a long variable due to the larger output.
      '1a) Create a ticker Index
@@ -87,7 +85,7 @@ Again, for loop was set from 0 to 11 and closed immediately after to save on exe
         Next i
 ----
 
-The execution times from the original code to refactored code is roughly 7 times faster. The use of arrays
+The execution times from the original code to refactored code is roughly 7 times faster. The use of arrays to loop data together impacted the increase in speed.
 ##### Execution times Original
 * Time taken 2017 .4414 seconds
 * Time taken 2018 .4453 seconds
