@@ -36,41 +36,41 @@ Set i from 0 to 11 to match with tickers. Loop was set to zero for initation of 
 
     '2a) Create a for loop to initialize the tickerVolumes to zero. 
     For i = 0 To 11
-        'arrays set to zero and will be adding next steps
+        'arrays set to zero and will be adding next steps. 2a runs into 3d
         tickerVolumes(i) = 0
         tickerStartingPrices(i) = 0
         tickerEndingPrices(i) = 0
     Next i
         
     '2b) Loop over all the rows in the spreadsheet.
-        For i = 2 To RowCount
+        For j = 2 To RowCount
 
 If tickerVolume matches a ticker, the volume is added. Included row check for first and last rows to make sure correct volumes being added relative to ticker. Lastly, tickerIndex increases to next ticker if the next rows tickers doesn't match the last (starting to compare a new ticker).
  
      '3a) Increase volume for current ticker
                 'If the row matches a ticker then volume increases
-            tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+            tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(j, 8).Value
         
      '3b) Check if the current row is the first row with the selected tickerIndex.
-            If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+            If Cells(j - 1, 1).Value <> tickers(tickerIndex) And Cells(j, 1).Value = tickers(tickerIndex) Then
 
-                tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+                tickerStartingPrices(tickerIndex) = Cells(j, 6).Value
         
             End If
         
       '3c) check if the current row is the last row with the selected ticker
-         'If the next rows ticker doesnt match, increase the tickerIndex.
-            If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+            'If the next rows ticker doesnt match, increase the tickerIndex.
+            If Cells(j + 1, 1).Value <> tickers(tickerIndex) And Cells(j, 1).Value = tickers(tickerIndex) Then
 
                 tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
             
             End If
           '3d Increase the tickerIndex.
-            If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
+            If Cells(j, 1).Value = tickers(tickerIndex) And Cells(j + 1, 1).Value <> tickers(tickerIndex) Then
             tickerIndex = tickerIndex + 1
             
             End If
-        Next i
+        Next j
 
 Again, for loop was set from 0 to 11 and closed immediately after to save on execution time. The row always starts on 4 (first row of table) and then adds number of ticker to match values with the correct tickers. Output set to Ticker, Total Daily Volume, and Return (columns 1, 2, and 3).
 
@@ -112,7 +112,8 @@ The process of refactoring code is not quick and has the potential to create new
 ### Pros and Cons of Refactoring Original Script 
 
 ##### Advantages
+Coding the loop all the data one instance instead of several different instances is more efficient. If this was a much larger set of data, the execution time difference would have been more significant. Initially coding for the DQ analysis alone was a simple process that was seemingly efficient for that task. Adding more components to the code and changing the objective made the initial single stock analysis obsolete. There is potential to interchange different stocks as long as datasets match, and that added functionality is a bonus
 
 ##### Disadvantages
-
+Time was a major disadvantage of refactoring the stock analysis. ** This was time that ultimately could have been utilized on another project.** The refactored code was significantly more complicated, which in turn added to project time. In the process of refactoring code, bugs were created through looping the arrays that wouldn't have been an issue otherwise. While the ability to swap out different stocks is a positive, its currently limited and would need more refactoring to automatically format data to match needed data to run stock analysis.
 
